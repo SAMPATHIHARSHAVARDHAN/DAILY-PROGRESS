@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1 class="winner">
+    {% if winner == "Draw" %}
+        🤝 DRAW GAME
+    {% else %}
+        🎉 {{ winner }} WINS 🎉
+    {% endif %}
+</h1>
+
+<a href="/reset">
+    <button>Play Again</button>
+</a>
+
+</body>
+</html>

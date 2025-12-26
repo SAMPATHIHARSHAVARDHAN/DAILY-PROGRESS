@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>🎮 Tic Tac Toe</h1>
+<h2 id="turn">Player X Turn</h2>
+
+<div class="board">
+    {% for i in range(9) %}
+    <div class="cell" onclick="makeMove({{ i }})"></div>
+    {% endfor %}
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
